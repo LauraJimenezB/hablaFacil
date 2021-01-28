@@ -131,6 +131,9 @@
 .fb-comments{
     background-color: #EFECDE;
 }
+.comentarioCont{
+    height:1000px;
+}
 .comentario{
     background-color: #EFECDE;
     padding: 25px;

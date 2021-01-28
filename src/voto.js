@@ -70,7 +70,8 @@ export function Voto(props) {
                 }}>Imprimir <img src={buttonPrint} alt="button-print"></img></button>
         </div>
       </section>
-      <section className="comentario">
+      <section className="comentarioCont">
+      <div className="comentario">
       <p className="titleComentario">¿Te sirvió la publicación? Dejanos tu comentario</p>
         <div
           className="fb-comments"
@@ -79,6 +80,7 @@ export function Voto(props) {
           data-numposts="4"
           data-colorscheme="dark"
         ></div>
+      </div>
       </section>
     </main>
   );
