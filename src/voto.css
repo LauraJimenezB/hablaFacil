@@ -134,7 +134,7 @@
 .comentario{
     background-color: #EFECDE;
     padding: 25px;
-    height: 700px;
+    height: 800px;
  }
  .fb-comments button{
      background-color: black;
@@ -161,7 +161,7 @@
 .masContainer {
     width: 100vw;
     padding: 5vw;
-    padding-top: 60px;
+    padding-top: 20px;
     background-color: #EFECDE;
 }
 

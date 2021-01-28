@@ -40,7 +40,7 @@ const Contador2 = () => {
 
   return (
     <div className='divLikeC'>
-      <button onClick={() => increase()} className='btnLikec'><ImgClap/></button>
+      <button onClick={() => increase()} className='btnLike'><ImgClap/></button>
       <p className='contador'>{count2}</p>
       {/*<Message/>
       <h4>{contador > 1 ? "solo presionar una vez" : "Gracias por tu opinion"}</h4>*/}
