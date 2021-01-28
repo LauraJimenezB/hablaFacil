@@ -142,7 +142,7 @@
 
 
 .interactionContainer {
-    width: 85vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -161,7 +161,7 @@
 .masContainer {
     width: 100vw;
     padding: 5vw;
-    padding-top: 20px;
+    padding-top: 60px;
     background-color: #EFECDE;
 }
 
@@ -178,7 +178,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 290px;
+    width: 260px;
 }
 .itemMenu{
     margin-left: 15px;
@@ -188,7 +188,7 @@
 }
 .itemMenuTitle{
     margin-left: 10px;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-decoration: underline;
     font-weight: bold;
     height: 25px;
@@ -220,9 +220,14 @@
     display: flex;
     flex-direction: row;
 }
+.divLikeC{
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+}
 .contador{
-    font-size: 1.3rem;
-    padding-top: 3px;
+    font-size: 1.1rem;
+    padding-top: 8px;
     font-weight: bold;
 }
 
@@ -358,6 +363,10 @@
 .imgLikeHome{
     width: 40px;
     height: 40px;
+}
+.imgLikeHomeC{
+    width: 28px;
+    height: 25px;
 }
 .divLikeHome{
     display: flex;

@@ -7,9 +7,9 @@ import { useState, useEffect } from "react";
 let status = 'notclicked';
 function ImgClap () {
     if(status==='notclicked') {
-        return (<img src={clapPic} alt={"like pic"} className='imgLikeHome'/>);
+        return (<img src={clapPic} alt={"like pic"} className='imgLikeHomeC'/>);
     } else {
-        return (<img src={clapPicSelect} alt={"like pic"} className='imgLikeHome'/>);
+        return (<img src={clapPicSelect} alt={"like pic"} className='imgLikeHomeC'/>);
     }
 }
 
@@ -39,8 +39,8 @@ const Contador2 = () => {
 
 
   return (
-    <div className='divLike'>
-      <button onClick={() => increase()} className='btnLike'><ImgClap/></button>
+    <div className='divLikeC'>
+      <button onClick={() => increase()} className='btnLikec'><ImgClap/></button>
       <p className='contador'>{count2}</p>
       {/*<Message/>
       <h4>{contador > 1 ? "solo presionar una vez" : "Gracias por tu opinion"}</h4>*/}
