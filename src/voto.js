@@ -77,7 +77,7 @@ export function Voto(props) {
           className="fb-comments"
           data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
           data-width="150"
-          data-numposts="4"
+          data-numposts="3"
           data-colorscheme="dark"
         ></div>
       </div>
