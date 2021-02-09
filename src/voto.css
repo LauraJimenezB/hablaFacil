@@ -1,5 +1,6 @@
 .mainVoto {
    background-color: #EFECDE; 
+   padding-bottom: 50px;
 }
 
 .banner {
@@ -143,8 +144,7 @@
      background-color: black;
  }
 
-
-.interactionContainer {
+ .shareContainer {
     width: 90vw;
     display: flex;
     flex-direction: row;
@@ -154,6 +154,16 @@
     margin-right: auto;
     padding-top: 30px;
     padding-bottom: 40px;
+}
+.interactionContainer {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
 }
 .compartir{
     display: flex;
@@ -196,7 +206,6 @@
     font-size: 1.1rem;
 }
 .itemMenuTitle{
-    margin-left: 10px;
     font-size: 1.1rem;
     text-decoration: underline;
     font-weight: bold;
@@ -234,12 +243,24 @@
     flex-direction: row;
     width: 60px;
 }
+.divLikeButtons{
+    display: flex;
+    flex-direction: row;
+    line-height: 6px;
+    margin-right: 5px;
+}
 .contador{
-    font-size: 1.1rem;
-    padding-top: 8px;
+    font-size: 1.3rem;
+    padding-top: 11px;
+    padding-left: 0.5rem;
     font-weight: bold;
 }
-
+.imgLikeFace{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    top: -12px;
+}
 
 .bannerHome {
     background:url('./homeBanner.png');
@@ -340,6 +361,18 @@
     font-size: 1.25rem;
     margin-top: 30px;
 }
+.btnToPost{
+    background-color: rgb(41, 40, 40);
+    color: white;
+    outline: none;
+    border-style: hidden;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 40px;
+    width: 120px;
+    height: 50px;
+    margin-right: 15px;
+}
 .cardTextoHome{
     padding-left: 15px;
     padding-right: 15px;
@@ -421,7 +454,18 @@
     font-family: "Regular";
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: left;
+}
+.titleLikes {
+    font-size: 1.3rem;
+    font-family: "Regular";
+    font-weight: bold;
+    margin-bottom: 20px;
     text-align: center;
+}
+hr{
+    width:90vw;
+    margin-bottom: 50px;
 }
 /*------------------------footer---------------*/
 .footerContainer{
@@ -460,4 +504,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.hiddenImg{
+    display: none;
 }

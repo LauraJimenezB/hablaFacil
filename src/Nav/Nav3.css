@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+nav {
+    background-color: rgb(22, 22, 22);
+}
+
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline;
+    background-color: rgb(26, 25, 25);
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    border-radius: 5px;
+    color: rgb(199, 189, 189);
+    text-decoration: none;
+    box-shadow: 0 0 5px rgb(199, 189, 189),
+                0 0 5px rgb(199, 189, 189)
+}
+
+nav ul ul {
+    position: absolute;
+    top:90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+    border-top: 3px solid rgb(199, 189, 189);
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+nav ul li:hover > ul{
+    top: 70px;
+    opacity:1;
+    visibility: visible;
+}
+
+nav ul ul li a:hover{
+    color: rgb(199, 189, 189);
+    text-decoration: none;
+    box-shadow: none;
+}
+
+nav ul ul li {
+    position: relative;
+    margin:0px;
+    width:150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+} */
+
+nav {
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 0;
+    height: 70px;
+}
+nav .logo {
+    margin: 0%;
+    height: 70px;
+}
+nav .logo img{
+    height: 70px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 5px;
+    margin-top: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+nav ul li :hover {
+    background: white;
+    color: rgb(24, 24, 24);
+    text-decoration: none;
+}
+nav ul li .dropdownMenu {
+    position: absolute;
+    width: 10rem;
+    top: 9%;
+    background-color: #1b1b1b;
+    display: none;
+}
+.dropdownMenu ul{
+    display: list-item;
+    padding-bottom: 10px;
+    background-color: #1b1b1b;
+}
+.dropdownMenu ul li:hover,
+.dropdownMenu ul li.active {
+    color: rgb(199, 189, 189);
+    background-color: #1b1b1b;
+    text-decoration: none;
+    box-shadow: none;
+}
+.menuIcon{
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+.xIcon{
+    height: 25px;
+    cursor: pointer;
+    display: none;
+}
+.menuBtn{
+    background: none;
+    outline: none;
+    border-style: none;
+}
+.menuItems{
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li:hover > .dropdownMenu{
+    display: block;
+}
+
+button, input {
+    height: 45px;
+    margin-top: 5px;
+    margin-left: 15px;
+    background-color: #1b1b1b;
+    outline: none;
+    border-color: #ebe7e7;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 5px;
+    color: white;
+}
+
+@media (max-width: 760px) {
+    nav .styleShow{
+        position: fixed;
+        top: 70px;
+        left:-100%;
+        background: #111;
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+    .inputMenu{
+        position: relative;
+        float: left;
+        left: -25%;
+    }
+    .menuBtn{
+        position: relative;
+        float: right;
+        left: 70%;
+    }
+
+    nav .styleHidden{
+        position: fixed;
+        top: 70px;
+        left:0%;
+        background: #111;
+        height: 50vh;
+        width: 100vw;
+        display: block;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+        text-align: center;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    nav ul li :hover,
+    nav ul li .active {
+    background: none;
+    color: rgb(241, 211, 177);
+    text-decoration: none;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .xIcon{
+        display: block;
+    }
+    .dropdownMenu ul{
+        background-color: #302f2fe1;
+    }
+    nav ul li .dropdownMenu {
+        width: 100vw;
+        top: 40%;
+        left: 0%;
+        background-color: #302f2fe1;
+    }
+}

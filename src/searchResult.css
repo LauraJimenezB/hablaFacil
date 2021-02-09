@@ -24,6 +24,7 @@ p{
     box-shadow: 0 0 10px gray;
     margin-bottom: 35px;
     margin-top: 30px;
+    justify-content: space-between;
 }
 .cardImg{
     width: 65vw;
