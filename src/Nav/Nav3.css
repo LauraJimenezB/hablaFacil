@@ -82,7 +82,7 @@ nav ul ul li a {
 } */
 
 nav {
-    background-color: #1b1b1b;
+    background-color: #001727;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,26 +115,28 @@ nav ul li a {
     transition: all .3s ease;
 }
 nav ul li :hover {
-    background: white;
-    color: rgb(24, 24, 24);
+    color: #FFFA52;
     text-decoration: none;
 }
 nav ul li .dropdownMenu {
     position: absolute;
-    width: 10rem;
+    width: 250px;
     top: 9%;
-    background-color: #1b1b1b;
+    background-color: #001727;
     display: none;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-bottom-width: 2px;
 }
 .dropdownMenu ul{
     display: list-item;
     padding-bottom: 10px;
-    background-color: #1b1b1b;
+    background-color: #001727;
 }
 .dropdownMenu ul li:hover,
 .dropdownMenu ul li.active {
-    color: rgb(199, 189, 189);
-    background-color: #1b1b1b;
+    color: #FFFA52;
+    background-color: #001727;
     text-decoration: none;
     box-shadow: none;
 }
@@ -166,9 +168,9 @@ button, input {
     height: 45px;
     margin-top: 5px;
     margin-left: 15px;
-    background-color: #1b1b1b;
+    background-color: #001727;
     outline: none;
-    border-color: #ebe7e7;
+    border-color: #999999;
     border-style: solid;
     border-width: 1.5px;
     border-radius: 5px;
@@ -180,7 +182,7 @@ button, input {
         position: fixed;
         top: 70px;
         left:-100%;
-        background: #111;
+        background: #001727;
         height: 50vh;
         width: 100vw;
         display: block;
@@ -200,15 +202,18 @@ button, input {
         position: fixed;
         top: 70px;
         left:0%;
-        background: #111;
-        height: 50vh;
+        background: #001727;
         width: 100vw;
         display: block;
     }
 
     nav ul li {
-        margin: 40px 0;
+        padding-top: 5px;
+        padding-bottom: 15px;
         text-align: center;
+        border-bottom-color: white;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
     }
     nav ul li a {
         font-size: 20px;
@@ -225,13 +230,14 @@ button, input {
     .xIcon{
         display: block;
     }
-    .dropdownMenu ul{
-        background-color: #302f2fe1;
+    .dropdownMenu ul li{
+        background-color: #063251;
+        margin-top: 0%;
     }
     nav ul li .dropdownMenu {
         width: 100vw;
-        top: 40%;
+        top: 132px;
         left: 0%;
-        background-color: #302f2fe1;
+        background-color: #001727;
     }
 }

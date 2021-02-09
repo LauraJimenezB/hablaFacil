@@ -74,6 +74,15 @@
     padding-top: 20px;
 }
 
+.textoImgContainerLink {
+    padding-top: 20px;
+    border-style: hidden;
+    border-bottom-color: #6e6e6e;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding:5vw;
+}
+
 .tituloBanner {
     font-size: 1.7rem;
     font-weight: bold;
@@ -98,9 +107,23 @@
     font-family: "Regular";
     font-weight: bold;
 }
+.contenidoLink{
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
 .contenido{
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.item{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
 }
 .divImg{
     display: flex;
@@ -263,18 +286,15 @@
 }
 
 .bannerHome {
-    background:url('./homeBanner.png');
+    background:url('./homeBanner.svg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 310px;
+    height: 350px;
     display: flex;
     flex-direction: column-reverse;
     border-style: hidden;
-    border-bottom-color: #333333;
-    border-bottom-style: solid;
-    border-bottom-width: 2px ;
 }
 
 .divCardHome {
@@ -437,8 +457,22 @@
 }
 .linkEnd{
     text-decoration: underline;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin-left: 5px;
+}
+.textEnd{
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 5px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+.textEnd2{
+    text-decoration: none;
+    font-size: 1.05rem;
+    margin-left: 5px;
+    padding-top: 10px;
+    font-weight: 400;
 }
 .textosContainerHome {
     margin: 5vw;

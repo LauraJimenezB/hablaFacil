@@ -6,14 +6,39 @@ import ContadorHome2 from "./ContadorHome2.js";
 
 export function Home(props) {
 
-  const homeBanner = props.posts.filter((post)=>post.categoria==='home'&&post.tipo==='banner');
-  const homePosts = props.posts.filter((post)=>post.categoria==='home'&&post.tipo==='texto');
+  const homeTextos = props.posts.filter(
+    (post) => post.categoria === "home" && post.tipo === "texto"
+  );
+  const homeTextImg = props.posts.filter(
+    (post) => post.categoria === "home" && post.tipo === "textoImg"
+  );
+  const homePosts = props.posts.filter((post)=>post.categoria==='home'&&post.tipo==='slide');
 
-  const banner = homeBanner.map((slide)=> 
-  <div key={slide.id}>
-      <p className='tituloBanner'>{slide.titulo}</p>
-  </div>
-  )
+  const listTextos =homeTextos.map((slide) => (
+    <div key={slide.id} className="texto">
+      <p className="titulo">{slide.titulo}</p>
+      <p className="subtitulo"> {slide.subtitulo}</p>
+      <p className="contenido">{slide.contenido}</p>
+      <p className="item">{slide.item1}</p>
+      <p className="item">{slide.item2}</p>
+      <p className="item">{slide.item3}</p>
+    </div>
+  ));
+
+  const textoImg = homeTextImg.map((slide) => (
+    <div key={slide.id} className="texto">
+      <p className="titulo">{slide.titulo}</p>
+      <p className="subtitulo"> {slide.subtitulo}</p>
+      <div className="divImg">
+        <img
+          src={slide.img}
+          alt={slide.id}
+          className={slide.order === 4 ? "imgVoto1" : "imgVoto2"}
+        />
+      </div>
+      <p className="contenidoLink">{slide.contenido}</p>
+    </div>
+  ));
 
     const listSlides = homePosts.map((slide)=> 
     <div className="divCardHome" key={slide.id}>
@@ -35,11 +60,14 @@ export function Home(props) {
     )
     return (
       <main>
-        <section className='bannerHome'>{banner}</section>
-        <div>
-          <p className='textoInfo'>Habla Fácil busca empoderar e informar a personas de una manera accesible y directa lo que necesitan saber para ejercer sus derechos y cumplir sus deberes como ciudadanos.</p>
-        </div>
-        <section className='textosContainerHome'><p className='titleTop'>INFO TOP DE HABLA FÁCIL</p>{listSlides}<p className='linkEnd'>Ver más sobre las elecciones</p></section>
+        <section className='bannerHome'></section>
+        <section className="textoImgContainer">{listTextos}</section>
+         <section className="textoImgContainerLink">{textoImg}</section>
+        <section className='textosContainerHome'><p className='titleTop'>INFO TOP DE HABLA FÁCIL</p>{listSlides}
+        <p className='linkEnd'>Ver más sobre las elecciones</p>
+        <p className='textEnd'>¡Eso es  todo!</p>
+        <p className='textEnd2'>Esperamos que esta información te haya servido. Compártela con tus amigos y familiares.</p>
+        </section>
       </main>
     );
   }
