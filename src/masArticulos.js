@@ -1,7 +1,7 @@
 import './searchResult.css';
 
 export function MasArticulos(props) {
-  const allPostsSearch = props.posts.filter((post)=>post.categoria==='buscar');
+  const allPostsSearch = props.posts.filter((post)=>post.categoria==='posts');
 
     return (
       <main className="mainResults">

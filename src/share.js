@@ -83,10 +83,10 @@ export function Share () {
                 } >
             <Dropdown.Item>
                   <EmailShareButton 
-                        url={"https://www.notion.so/140a18721f6c44e48812d54dbe6b7113?v=1fbbb87096b143ccbc0e556409ea92f8"}
+                        url={"https://hablafacilapp-20c5a.web.app/"}
                         quote={"HablaFacil - Mantente informado"}
                         hashtag="#HablaFacil">
-                  <div className='flex'>
+                  <div className='flexShare'>
                   <img 
                         src={emailPic}
                         alt={"email pic"}
@@ -98,10 +98,10 @@ export function Share () {
             </Dropdown.Item>
             <Dropdown.Item>
                   <FacebookShareButton 
-                        url={"https://www.notion.so/140a18721f6c44e48812d54dbe6b7113?v=1fbbb87096b143ccbc0e556409ea92f8"}
+                        url={"https://hablafacilapp-20c5a.web.app/"}
                         quote={"HablaFacil - Mantente informado"}
                         hashtag="#HablaFacil">
-                  <div className='flex'>
+                  <div className='flexShare'>
                   <img 
                         src={fbPic}
                         alt={"fb pic"}
@@ -113,10 +113,10 @@ export function Share () {
             </Dropdown.Item>
             <Dropdown.Item>
                   <TwitterShareButton 
-                        url={"https://www.notion.so/140a18721f6c44e48812d54dbe6b7113?v=1fbbb87096b143ccbc0e556409ea92f8"}
+                        url={"https://hablafacilapp-20c5a.web.app/"}
                         quote={"HablaFacil - Mantente informado"}
                         hashtag="#HablaFacil">
-                  <div className='flex'>
+                  <div className='flexShare'>
                   <img 
                         src={twitterPic}
                         alt={"twitter pic"}
@@ -128,10 +128,10 @@ export function Share () {
             </Dropdown.Item>
             <Dropdown.Item>
                   <LinkedinShareButton 
-                        url={"https://www.notion.so/140a18721f6c44e48812d54dbe6b7113?v=1fbbb87096b143ccbc0e556409ea92f8"}
+                        url={"https://hablafacilapp-20c5a.web.app/"}
                         quote={"HablaFacil - Mantente informado"}
                         hashtag="#HablaFacil">
-                  <div className='flex'>
+                  <div className='flexShare'>
                   <img 
                         src={linkedinPic}
                         alt={"linkedin pic"}
@@ -143,10 +143,10 @@ export function Share () {
             </Dropdown.Item>
             <Dropdown.Item>
                   <WhatsappShareButton 
-                        url={"https://www.notion.so/140a18721f6c44e48812d54dbe6b7113?v=1fbbb87096b143ccbc0e556409ea92f8"}
+                        url={"https://hablafacilapp-20c5a.web.app/"}
                         quote={"HablaFacil - Mantente informado"}
                         hashtag="#HablaFacil">
-                  <div className='flex'>
+                  <div className='flexShare'>
                   <img 
                         src={wpPic}
                         alt={"wp pic"}

@@ -1,5 +1,6 @@
 .mainVoto {
    background-color: #EFECDE; 
+   padding-bottom: 50px;
 }
 
 .banner {
@@ -73,6 +74,15 @@
     padding-top: 20px;
 }
 
+.textoImgContainerLink {
+    padding-top: 20px;
+    border-style: hidden;
+    border-bottom-color: #6e6e6e;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding:5vw;
+}
+
 .tituloBanner {
     font-size: 1.7rem;
     font-weight: bold;
@@ -97,9 +107,23 @@
     font-family: "Regular";
     font-weight: bold;
 }
+.contenidoLink{
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
 .contenido{
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+.item{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
 }
 .divImg{
     display: flex;
@@ -131,18 +155,20 @@
 .fb-comments{
     background-color: #EFECDE;
 }
+.comentarioCont{
+    height:1000px;
+}
 .comentario{
     background-color: #EFECDE;
     padding: 25px;
-    height: 700px;
+    height: 800px;
  }
  .fb-comments button{
      background-color: black;
  }
 
-
-.interactionContainer {
-    width: 85vw;
+ .shareContainer {
+    width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -151,6 +177,16 @@
     margin-right: auto;
     padding-top: 30px;
     padding-bottom: 40px;
+}
+.interactionContainer {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
 }
 .compartir{
     display: flex;
@@ -178,7 +214,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 290px;
+    width: 260px;
+}
+.flexShare{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 130px;
 }
 .itemMenu{
     margin-left: 15px;
@@ -187,8 +229,7 @@
     font-size: 1.1rem;
 }
 .itemMenuTitle{
-    margin-left: 10px;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-decoration: underline;
     font-weight: bold;
     height: 25px;
@@ -220,26 +261,40 @@
     display: flex;
     flex-direction: row;
 }
+.divLikeC{
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+}
+.divLikeButtons{
+    display: flex;
+    flex-direction: row;
+    line-height: 6px;
+    margin-right: 5px;
+}
 .contador{
     font-size: 1.3rem;
-    padding-top: 3px;
+    padding-top: 11px;
+    padding-left: 0.5rem;
     font-weight: bold;
 }
-
+.imgLikeFace{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    top: -12px;
+}
 
 .bannerHome {
-    background:url('./homeBanner.png');
+    background:url('./homeBanner.svg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 310px;
+    height: 350px;
     display: flex;
     flex-direction: column-reverse;
     border-style: hidden;
-    border-bottom-color: #333333;
-    border-bottom-style: solid;
-    border-bottom-width: 2px ;
 }
 
 .divCardHome {
@@ -326,6 +381,18 @@
     font-size: 1.25rem;
     margin-top: 30px;
 }
+.btnToPost{
+    background-color: rgb(41, 40, 40);
+    color: white;
+    outline: none;
+    border-style: hidden;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 40px;
+    width: 120px;
+    height: 50px;
+    margin-right: 15px;
+}
 .cardTextoHome{
     padding-left: 15px;
     padding-right: 15px;
@@ -359,6 +426,10 @@
     width: 40px;
     height: 40px;
 }
+.imgLikeHomeC{
+    width: 28px;
+    height: 25px;
+}
 .divLikeHome{
     display: flex;
     flex-direction: row;
@@ -386,8 +457,22 @@
 }
 .linkEnd{
     text-decoration: underline;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin-left: 5px;
+}
+.textEnd{
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-left: 5px;
+    padding-top: 10px;
+    font-weight: 500;
+}
+.textEnd2{
+    text-decoration: none;
+    font-size: 1.05rem;
+    margin-left: 5px;
+    padding-top: 10px;
+    font-weight: 400;
 }
 .textosContainerHome {
     margin: 5vw;
@@ -403,7 +488,18 @@
     font-family: "Regular";
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: left;
+}
+.titleLikes {
+    font-size: 1.3rem;
+    font-family: "Regular";
+    font-weight: bold;
+    margin-bottom: 20px;
     text-align: center;
+}
+hr{
+    width:90vw;
+    margin-bottom: 50px;
 }
 /*------------------------footer---------------*/
 .footerContainer{
@@ -442,4 +538,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.hiddenImg{
+    display: none;
 }

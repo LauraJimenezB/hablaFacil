@@ -17,13 +17,14 @@ code {
   background-color: #EFECDE;
   border:none;
   outline: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-decoration: underline;
   font-weight: bold;
   display: flex;
   flex-direction: row;
   height: 25px;
   padding-top: 5px;
+  margin-right: 25px;
 }
 .button-print > img {
   height: 25px;

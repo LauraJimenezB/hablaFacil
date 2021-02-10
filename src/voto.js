@@ -1,22 +1,22 @@
 import './voto.css';
-import { Share } from './share'
+import { ToVotoPautas } from './toVotoPautas.js';
+import { ToVotoSanciones } from './toVotoSanciones.js';
+import { ToVotoSeguridad } from './toVotoSeguridad.js';
+/* import { Share } from './share'
 import Contador from "./Contador.js";
 import printJS from 'print-js';
 import buttonPrint from './printer.svg';
-
+ */
 export function Voto(props) {
   const votoBanner = props.posts.filter(
     (post) => post.categoria === "voto" && post.tipo === "banner"
   );
-  const votoTextos = props.posts.filter(
+  /* const votoTextos = props.posts.filter(
     (post) => post.categoria === "voto" && post.tipo === "texto"
   );
   const votoTextImg = props.posts.filter(
     (post) => post.categoria === "voto" && post.tipo === "textoImg"
-  );
-  const votoSlides = props.posts.filter(
-    (post) => post.categoria === "voto" && post.tipo === "slide"
-  );
+  ); */
 
   const banner = votoBanner.map((slide) => (
     <div key={slide.id}>
@@ -24,7 +24,7 @@ export function Voto(props) {
     </div>
   ));
 
-  const listTextos = votoTextos.map((slide) => (
+  /* const listTextos = votoTextos.map((slide) => (
     <div key={slide.id} className="texto">
       <p className="titulo">{slide.titulo}</p>
       <p className="subtitulo"> {slide.subtitulo}</p>
@@ -46,40 +46,44 @@ export function Voto(props) {
       <p className="contenido">{slide.contenido}</p>
     </div>
   ));
-  const listSlides = votoSlides.map((slide) => (
-    <div key={slide.id} className="slide">
-      <div>
-        <img src={slide.img} alt={slide.id} className="imgSlide" />
-      </div>
-      <span>{slide.contenido}</span>
-    </div>
-  ));
+ */
+
+  const allPostsSearch = props.posts.filter((post)=>post.categoria === "voto" && post.tipo === "posts");
+  const slideBtn = (order) => {
+    if(order===2){
+    return <ToVotoPautas/> 
+    } else if(order===3){
+      return(<ToVotoSeguridad/>)
+    } else {
+      return(<ToVotoSanciones/>)
+    }
+  }
 
   return (
     <main className="mainVoto" id='mainVoto'>
       <section className="banner">{banner}</section>
-      <section className="textosContainer">{listTextos}</section>
+      {/* <section className="textosContainer">{listTextos}</section>
       <section className="textoImgContainer">{textoImg}</section>
-      <section className="slideContainer">{listSlides}</section>
-      <section className='interactionContainer'>
-        <Contador/>
-        <div className='flex'>
-        <Share/>
-        <button className="button-print" onClick={ e => {
-            printJS({ printable: 'mainVoto', type: 'html', header: 'Habla Fácil' })
-                }}>Imprimir <img src={buttonPrint} alt="button-print"></img></button>
+      <section className="slideContainer">{listSlides}</section> */}
+      <section className="textosContainer">{
+          /* Retorna array de posts */
+        // eslint-disable-next-line array-callback-return
+        allPostsSearch.map((slide)=> 
+        <div className="divCard" key={slide.id}>
+            <img src={slide.img} className="cardImg" alt={slide.id}/>
+            <div className="cardContent">
+              <div className="cardTexto">
+                <h4 className="cardTitulo">{slide.titulo}</h4>
+                <p className="cardContenido">{slide.contenido}</p>
+              </div>
+              <div className="cardFooter">
+                <p>{slide.fecha}</p>
+                {slideBtn(slide.order)}
+              </div>
+            </div>
         </div>
-      </section>
-      <section className="comentario">
-      <p className="titleComentario">¿Te sirvió la publicación? Dejanos tu comentario</p>
-        <div
-          className="fb-comments"
-          data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
-          data-width="150"
-          data-numposts="4"
-          data-colorscheme="dark"
-        ></div>
-      </section>
+        )
+        }</section>
     </main>
   );
 }

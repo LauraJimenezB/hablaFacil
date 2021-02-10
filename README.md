@@ -93,5 +93,3 @@ Squad : 7
 -  Laura Jimenez
 -  Aurelis Moreno
 -  Yaje Panta
-
-
