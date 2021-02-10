@@ -77,7 +77,7 @@ export function Voto(props) {
                 <p className="cardContenido">{slide.contenido}</p>
               </div>
               <div className="cardFooter">
-                <p>{slide.fecha}</p>
+                <p className="cardFecha">{slide.fecha}</p>
                 {slideBtn(slide.order)}
               </div>
             </div>

@@ -14,6 +14,9 @@ export function VotoSanciones (props) {
   const votoTextos = props.posts.filter(
     (post) => post.categoria === "votoSanciones" && post.tipo === "texto"
   );
+  const sancionesLink = props.posts.filter(
+    (post) => post.categoria === "votoSanciones" && post.tipo === "link"
+  );
   const seguridadLikes = props.posts.filter(
     (post) => post.categoria === "votoSanciones" && post.tipo === "counter"
   );
@@ -62,6 +65,16 @@ export function VotoSanciones (props) {
     </div>
   )); */
 
+  const linkFuente = sancionesLink.map((slide) => (
+    <div key={slide.id} className="linkContainer">
+      <img
+          src={slide.img}
+          alt={slide.id}
+        />
+      <a href={slide.fuente}><p className='fuente'>Ir a la fuente</p></a>
+    </div>
+  ));
+
   const print = () => {
     window.print();
   }
@@ -80,6 +93,7 @@ export function VotoSanciones (props) {
     <main className="mainVoto" id='mainVoto'>
       <section className="banner">{banner}</section>
       <section className="textosContainer">{listTextos}</section>
+      <section>{linkFuente}</section>
       <section className='interactionContainer'>
         <ColoredLine color="black" />
         <p className="titleLikes">¿Te sirvió la publicación?</p>

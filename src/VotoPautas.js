@@ -14,6 +14,9 @@ export function VotoPautas(props) {
   const votoTextImg = props.posts.filter(
     (post) => post.categoria === "votoPautas" && post.tipo === "textoImg"
   );
+  const pautaLink = props.posts.filter(
+    (post) => post.categoria === "votoPautas" && post.tipo === "link"
+  );
   const pautaLikes = props.posts.filter(
     (post) => post.categoria === "votoPautas" && post.tipo === "counter"
   );
@@ -54,6 +57,16 @@ export function VotoPautas(props) {
       <p className="contenido">{slide.contenido}</p>
     </div>
   ));
+ 
+  const linkFuente = pautaLink.map((slide) => (
+    <div key={slide.id} className="linkContainer">
+      <img
+          src={slide.img}
+          alt={slide.id}
+        />
+      <a href={slide.fuente}><p className='fuente'>Ir a la fuente</p></a>
+    </div>
+  ));
 
   const print = () => {
     window.print();
@@ -74,6 +87,7 @@ export function VotoPautas(props) {
       <section className="banner">{banner}</section>
       <section className="textosContainer">{listTextos}</section>
       <section className="textoImgContainer">{textoImg}</section>
+      <section>{linkFuente}</section>
       <section className='interactionContainer'>
         <ColoredLine color="black" />
         <p className="titleLikes">¿Te sirvió la publicación?</p>
@@ -82,10 +96,6 @@ export function VotoPautas(props) {
       <section className='shareContainer'>
         <Share/>
         <button className="button-print" onClick={()=>print()}>Imprimir <img src={buttonPrint} alt="button-print"></img></button>
-
-        {/* <div>
-          <button onClick={()=>pdfClick()}>Download Pdf</button>
-        </div> */}
       </section>
       <section className="comentarioCont">
       <div className="comentario">

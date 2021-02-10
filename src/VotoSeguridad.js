@@ -14,6 +14,9 @@ export function VotoSeguridad (props) {
   const votoSlides = props.posts.filter(
     (post) => post.categoria === "votoSeguridad" && post.tipo === "slide"
   );
+  const seguridadLink = props.posts.filter(
+    (post) => post.categoria === "votoSeguridad" && post.tipo === "link"
+  );
   const seguridadLikes = props.posts.filter(
     (post) => post.categoria === "votoSeguridad" && post.tipo === "counter"
   );
@@ -55,6 +58,16 @@ export function VotoSeguridad (props) {
     </div>
   ));
 
+  const linkFuente = seguridadLink.map((slide) => (
+    <div key={slide.id} className="linkContainer">
+      <img
+          src={slide.img}
+          alt={slide.id}
+        />
+      <a href={slide.fuente}><p className='fuente'>Ir a la fuente</p></a>
+    </div>
+  ));
+
   const print = () => {
     window.print();
   }
@@ -74,6 +87,7 @@ export function VotoSeguridad (props) {
       <section className="banner">{banner}</section>
       <section className="textoImgContainer">{textoImg}</section>
       <section className="slideContainer">{listSlides}</section>
+      <section>{linkFuente}</section>
       <section className='interactionContainer'>
         <ColoredLine color="black" />
         <p className="titleLikes">¿Te sirvió la publicación?</p>

@@ -1,11 +1,12 @@
 import { useHistory } from "react-router-dom";
 
 
-export function ToVotoSeguridad() {
+export function ToVotoSeguridad(props) {
 
     let history = useHistory();
   
     function handleClickToVoto() {
+      props.setSearchField('')
       history.push("/elecciones-medidas-sanitarias");
     }
   

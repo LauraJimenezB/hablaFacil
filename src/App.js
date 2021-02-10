@@ -17,6 +17,7 @@ import { MasArticulos } from './masArticulos'
 import { FooterH } from './footer.js'
 //import Nav from './Nav/Nav.js'
 import Nav3 from './Nav/Nav3.js'
+import ScrollToTop from './toTop'
 
 
 export default function App() {
@@ -44,9 +45,6 @@ export default function App() {
           if(searchField.length>0) {
             return (<div>
                 <SearchResults posts={posts} setPosts={setPosts} searchField={searchField} setSearchField={setSearchField}/>
-                <div>
-                {componente}
-              </div>
             </div>
             )
           } else if(vista===false && searchField.length===0) {
@@ -70,7 +68,7 @@ export default function App() {
       <div>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-
+        <ScrollToTop />
         <Switch>
           <Route path="/elecciones">
             {resultados(<Voto posts={posts} setPosts={setPosts}/>, false)}

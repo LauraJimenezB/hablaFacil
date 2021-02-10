@@ -6,6 +6,7 @@ export function ToVotoPautas(props) {
     let history = useHistory();
   
     function handleClickToVoto() {
+      props.setSearchField('')
       history.push("/elecciones-pautas-generales");
     }
   

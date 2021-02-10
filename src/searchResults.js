@@ -8,11 +8,11 @@ export function SearchResults(props) {
   const allPostsSearch = props.posts.filter((post)=>post.tipo === "posts");
   const slideBtn = (order) => {
     if(order===2){
-    return <ToVotoPautas/> 
+    return <ToVotoPautas setSearchField={props.setSearchField}/> 
     } else if(order===3){
-      return(<ToVotoSeguridad/>)
+      return(<ToVotoSeguridad setSearchField={props.setSearchField}/>)
     } else {
-      return(<ToVotoSanciones/>)
+      return(<ToVotoSanciones setSearchField={props.setSearchField}/>)
     }
   }
 
@@ -30,15 +30,17 @@ export function SearchResults(props) {
           }
         }).map((slide)=> 
         <div className="divCard" key={slide.id}>
+            <img src={slide.img} className="cardImg" alt={slide.id}/>
             <div className="cardContent">
               <div className="cardTexto">
                 <h4 className="cardTitulo">{slide.titulo}</h4>
-                <p>{slide.fecha}</p>
-              </div>
-            </div>
-            <div className="cardFooter">
+                <p className="cardContenido">{slide.contenido}</p>
+                <p className="cardFecha">{slide.fecha}</p>
+                <div className="cardFooter">
                 {slideBtn(slide.order)}
               </div>
+              </div>
+            </div>
         </div>
         )
         }</section>

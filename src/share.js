@@ -23,32 +23,32 @@ export function Share () {
     
 .btn-primary{
       color: black;
-      background-color: #EFECDE;
-      border-color:  #EFECDE;
+      background-color: #FBF9F1;
+      border-color:  #FBF9F1;
   }
   
   .btn-primary:hover{
       color: black;
-      background-color: #EFECDE;
-      border-color:  #EFECDE;
+      background-color: #FBF9F1;
+      border-color:  #FBF9F1;
   }
   
   .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
       color: black;
-      background-color: #EFECDE;
-      border-color:  #EFECDE;
+      background-color: #FBF9F1;
+      border-color:  #FBF9F1;
   }
   
   
   .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-      box-shadow: 0 0 0 0.2rem  #EFECDE;
+      box-shadow: 0 0 0 0.2rem  #FBF9F1;
   }
   
   .btn-primary.focus, .btn-primary:focus{
-      box-shadow: 0 0 0 0.2rem  #EFECDE;
+      box-shadow: 0 0 0 0.2rem  #FBF9F1;
       color: black;
-      background-color: #EFECDE;
-      border-color:  #EFECDE;
+      background-color: #FBF9F1;
+      border-color:  #FBF9F1;
   }
   
   .dropdown-menu {

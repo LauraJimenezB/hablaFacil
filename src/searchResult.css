@@ -34,12 +34,16 @@ p{
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+    width: fit-content;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .cardTexto{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 5px;
+    text-align: justify;
 }
 .cardContenido {
     font-size: .95rem;
