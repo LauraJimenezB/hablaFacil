@@ -4,7 +4,7 @@ export const SearchBox = (setSearchField, searchField) => {
     }
     return (
       <div>
-        <input type="text" placeholder='Buscar...' value={searchField} onChange={(e)=>setSearchField(e.target.value)}></input>
+        <input type="text" placeholder='   Buscar...' value={searchField} onChange={(e)=>setSearchField(e.target.value)}></input>
         <button onClick={()=>cleanInput()}>Volver</button>
       </div>
     ) 

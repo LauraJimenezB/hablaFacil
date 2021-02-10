@@ -33,7 +33,7 @@ const Nav3 = (searchField, setSearchField, onSearch) => {
           </ul>
           <input
               type="search"
-              placeholder="Buscar"
+              placeholder="     Buscar"
               value={searchField} onChange={(e)=>setSearchField(e.target.value)} className='inputMenu'
             />
           </div>
