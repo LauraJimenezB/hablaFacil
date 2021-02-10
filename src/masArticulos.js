@@ -1,17 +1,17 @@
 import './searchResult.css';
-import { ToVotoPautas } from './toVotoPautas.js';
-import { ToVotoSanciones } from './toVotoSanciones.js';
-import { ToVotoSeguridad } from './toVotoSeguridad.js';
+import { ToVotoPautasE } from './toVotoPautasE.js';
+import { ToVotoSancionesE } from './toVotoSancionesE.js';
+import { ToVotoSeguridadE } from './toVotoSeguridadE.js';
 
 export function MasArticulos(props) {
   const allPostsSearch = props.posts.filter((post)=>post.tipo==='posts');
   const slideBtn = (order) => {
     if(order===2){
-    return <ToVotoPautas/> 
+    return <ToVotoPautasE/> 
     } else if(order===3){
-      return(<ToVotoSeguridad/>)
+      return(<ToVotoSeguridadE/>)
     } else {
-      return(<ToVotoSanciones/>)
+      return(<ToVotoSancionesE/>)
     }
   }
 

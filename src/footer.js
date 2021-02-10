@@ -33,8 +33,7 @@ export function FooterH () {
             </a>
           <br />
           <p>
-            ©2021, Habla Fácil en colaboración con Laura Jiménez,Milsca Vega,
-            Aurelis Moreno. Todos los derechos reservados
+            ©2021, Habla Fácil en colaboración con Laura Jiménez, Milusca Vega, Aurelis Moreno. Todos los derechos reservados
           </p>
         </div>
       </div>

@@ -113,6 +113,10 @@
     font-size: 1.1rem;
     text-align: justify;
 }
+.contenidoLink a{
+    color:black;
+    text-decoration: underline;
+}
 .contenido{
     margin-bottom: 20px;
     font-size: 1.1rem;

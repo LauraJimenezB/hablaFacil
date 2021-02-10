@@ -1,7 +1,7 @@
 import './voto.css';
-import { ToVotoPautas } from './toVotoPautas.js';
-import { ToVotoSanciones } from './toVotoSanciones.js';
-import { ToVotoSeguridad } from './toVotoSeguridad.js';
+import { ToVotoPautasE } from './toVotoPautasE.js';
+import { ToVotoSancionesE } from './toVotoSancionesE.js';
+import { ToVotoSeguridadE } from './toVotoSeguridadE.js';
 /* import { Share } from './share'
 import Contador from "./Contador.js";
 import printJS from 'print-js';
@@ -51,11 +51,11 @@ export function Voto(props) {
   const allPostsSearch = props.posts.filter((post)=>post.categoria === "voto" && post.tipo === "posts");
   const slideBtn = (order) => {
     if(order===2){
-    return <ToVotoPautas/> 
+    return <ToVotoPautasE/> 
     } else if(order===3){
-      return(<ToVotoSeguridad/>)
+      return(<ToVotoSeguridadE/>)
     } else {
-      return(<ToVotoSanciones/>)
+      return(<ToVotoSancionesE/>)
     }
   }
 

@@ -1,8 +1,6 @@
 import { ToVoto } from './toVoto.js';
 import { ToMesa } from './toMesa.js'
 import logoHome from './logoHome.svg'
-import ContadorHome from "./ContadorHome.js";
-import ContadorHome2 from "./ContadorHome2.js";
 
 export function Home(props) {
 
@@ -36,7 +34,7 @@ export function Home(props) {
           className={slide.order === 4 ? "imgVoto1" : "imgVoto2"}
         />
       </div>
-      <p className="contenidoLink">{slide.contenido}</p>
+      <p className="contenidoLink">Nos puedes encontrar en nuestro instagram como:  <a href="https://www.instagram.com/hablafacilpe/"><p>{slide.contenido}</p></a></p>
     </div>
   ));
 
@@ -53,7 +51,6 @@ export function Home(props) {
               </div>
               <div className="cardFooterHome">
                 {slide.order===1 ? <ToVoto/> : <ToMesa/>}
-                {slide.order===1 ? <ContadorHome/> : <ContadorHome2/>}
               </div>
             </div>
         </div>
